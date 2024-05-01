@@ -49,7 +49,7 @@ static void * thread_process(void *arg)
     ticket[i] = 0; /* indicar que saimos da secao critica */
   }while (1);
 
-return NULL;
+  return NULL;
 }
 
 int main(int argc, char **argv)
