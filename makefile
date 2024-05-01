@@ -5,12 +5,10 @@
 #                                                          #
 ############################################################
 
-program.o: libbakery.so program.c
-	gcc -c -L . -o program program.c
-libbakery.so: bakery.c bakery.h #bakery.o
-	gcc -c -fPIC -shared -o libbakery.so bakery.c
-# bakery.o: bakery.h bakery.c
-# 	gcc -c bakery.c
+program.o: program.c libbakery.so
+	gcc -L . -o program program.c -lbakery
+libbakery.so: libbakery.c libbakery.h
+	gcc -c -shared -fPIC -o libbakery.so libbakery.c
 
 clean: 
 	rm *.o program libbakery.so

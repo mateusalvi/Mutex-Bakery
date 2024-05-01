@@ -5,7 +5,7 @@
 #                                                          #
 ##########################################################*/
 
-#include "bakery.h"
+#include "libbakery.h"
 
 int main(int argc, char **argv)
 {

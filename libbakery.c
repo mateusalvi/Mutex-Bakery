@@ -5,7 +5,7 @@
 #                                                          #
 ##########################################################*/
 
-#include "bakery.h"
+#include "libbakery.h"
 
 int choosing [N_THREADS];
 int ticket [N_THREADS];
