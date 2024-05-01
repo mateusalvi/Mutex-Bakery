@@ -5,9 +5,12 @@
 #                                                          #
 ############################################################
 
-program.c: bakery.so
-	gcc -L . -o program program.c -lmutex -lpthread 
-bakery.so: bakery.o
-	gcc -shared -o libbakery.so bakery.h
-bakery.o: 
-	gcc -shared -o libbakery.so bakery.c
+program.o: libbakery.so program.c
+	gcc -c -L . -o program program.c
+libbakery.so: bakery.c bakery.h #bakery.o
+	gcc -c -fPIC -shared -o libbakery.so bakery.c
+# bakery.o: bakery.h bakery.c
+# 	gcc -c bakery.c
+
+clean: 
+	rm *.o program libbakery.so

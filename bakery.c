@@ -5,7 +5,7 @@
 #                                                          #
 ##########################################################*/
 
-#include <bakery.h>
+#include "bakery.h"
 
 int choosing [N_THREADS];
 int ticket [N_THREADS];
@@ -43,7 +43,7 @@ int max_ticket()
     max = ticket[i] > max ? ticket[i] : max;
 }
 
-static void * thread_process(void *arg)
+void *thread_process(void *arg)
 {
   int j, i = *((int *) arg);
 
