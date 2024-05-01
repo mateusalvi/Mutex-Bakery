@@ -1,3 +1,10 @@
+/*##########################################################
+#                                                          #
+# INF01151 - Sistemas Operacionais II N - Turma A (2024/1) #
+#           Mateus Luiz Salvi - Bianca Pelegrini           #
+#                                                          #
+##########################################################*/
+
 #include <bakery.h>
 
 int choosing [N_THREADS];
